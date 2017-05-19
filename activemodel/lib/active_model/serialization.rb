@@ -100,7 +100,8 @@ module ActiveModel
       attribute_names = attributes.keys
       if only = options[:only]
         attribute_names &= Array(only).map(&:to_s)
-      elsif except = options[:except]
+      end
+      if except = options[:except]
         attribute_names -= Array(except).map(&:to_s)
       end
 
