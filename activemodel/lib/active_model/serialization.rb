@@ -95,6 +95,7 @@ module ActiveModel
     #   person.serializable_hash(methods: :capitalized_name)
     #   # => {"name"=>"bob", "age"=>22, "capitalized_name"=>"Bob"}
     def serializable_hash(options = nil)
+      p 'hello'
       options ||= {}
 
       attribute_names = attributes.keys
